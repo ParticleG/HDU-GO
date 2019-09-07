@@ -37,7 +37,12 @@ function disableAlert() {
 		`
 			window._alert = window.alert;
 			window.alert = (text) => {
-				const tipList = ['验证码不正确', '人数超过限制'];
+				if (text.includes('验证码不正确')) {
+					window._alert(text);
+					window._alert('HDU-GO 提示：请退出数字杭电账号并重新启动浏览器，使验证码屏蔽功能生效。');
+					return;
+				}
+				const tipList = ['人数超过限制'];
 				if (!tipList.some(item => text.includes(item))) {
 					window._alert(text);
 					return;
