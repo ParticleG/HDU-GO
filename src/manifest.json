@@ -1,0 +1,59 @@
+{
+	"manifest_version": 2,
+	"name": "HDU-GO",
+	"version": "19.0907",
+	"description": "身在杭电必用的Chrome插件！",
+	"homepage_url": "https://alphanut.cn/HDU-GO",
+	"icons": {
+		"16": "img/icon.png",
+		"48": "img/icon.png",
+		"128": "img/icon.png"
+	},
+	"browser_action": {
+		"default_icon": "img/icon.png",
+		"default_title": "HDU-GO",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://jxgl.hdu.edu.cn/xs_main.aspx*",
+				"*://jxglteacher.hdu.edu.cn/xs_main.aspx*"
+			],
+			"js": ["js/utils.js", "js/xs_main.js"],
+			"run_at": "document_start",
+			"all_frames": true
+		},
+		{
+			"matches": [
+				"*://jxgl.hdu.edu.cn/xf_xsqxxxk.aspx*",
+				"*://jxglteacher.hdu.edu.cn/xf_xsqxxxk.aspx*"
+			],
+			"js": ["js/utils.js", "js/xf_xsqxxxk.js"],
+			"run_at": "document_start",
+			"all_frames": true
+		},
+		{
+			"matches": [
+				"*://jxgl.hdu.edu.cn/xsxk.aspx*",
+				"*://jxgl.hdu.edu.cn/xsxkqk.aspx*",
+				"*://jxglteacher.hdu.edu.cn/xsxk.aspx*",
+				"*://jxglteacher.hdu.edu.cn/xsxkqk.aspx*"
+			],
+			"js": ["js/utils.js", "js/xsxk.js"],
+			"run_at": "document_start",
+			"all_frames": true
+		}
+	],
+	"background": { 
+		"scripts": ["js/utils.js", "js/background.js"]
+	},
+	"permissions": [
+		"notifications",
+		"tabs",
+		"storage",
+		"webRequest",
+		"webRequestBlocking",
+		"*://*.hdu.edu.cn/*"
+	]
+}

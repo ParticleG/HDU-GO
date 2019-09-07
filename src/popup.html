@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="description" content="HDU-GO 万能的数字杭电插件">
+	<title>HDU-GO</title>
+	<!-- 开始 引入lib -->
+	<script src="lib/mdui/js/mdui.min.js"></script>
+	<link rel="stylesheet" href="lib/mdui/css/mdui.min.css">
+	<!-- 结束 引入lib -->
+
+	<!-- 开始 自定义css引入 -->
+	<link rel="stylesheet" href="css/popup.css">
+	<!-- 结束 自定义css引入 -->
+	<!-- 开始 自定义js引入 -->
+	<script src="js/popup.js"></script>
+	<!-- 结束 自定义js引入 -->
+</head>
+<body>
+	<ul class="mdui-list" mdui-collapse="{accordion: true}">
+		<li class="mdui-collapse-item">
+			<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+				<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">assignment</i>
+				<div class="mdui-list-item-content">HDU-GO 公告板</div>
+				<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+			</div>
+			<div class="mdui-collapse-item-body mdui-list mdui-list-dense" id="noticeBoard">
+				
+			</div>
+		</li>
+
+		<div class="mdui-divider"></div>
+
+		<li class="mdui-collapse-item" id="Module1">
+			<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+				<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-orange">web</i>
+				<div class="mdui-list-item-content">抢课 - 通识选修课</div>
+				<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+			</div>
+			<ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+				<a href="https://alphanut.cn/HDU-GO" target="__blank" style="display: block; height: 100%; width: 100%;"><li class="mdui-list-item mdui-ripple">查看使用方法</li></a>
+				<li>
+					<label class="mdui-list-item mdui-ripple">
+						<div class="mdui-list-item-content">自动刷新</div>
+						<div class="mdui-checkbox mdui-switch">
+							<input type="checkbox"/>
+							<i class="mdui-switch-icon"></i>
+						</div>
+					</label>
+				</li>
+				<li>
+					<label class="mdui-list-item mdui-ripple">
+						<div class="mdui-list-item-content">屏蔽验证码</div>
+						<div class="mdui-checkbox mdui-switch">
+							<input type="checkbox"/>
+							<i class="mdui-switch-icon"></i>
+						</div>
+					</label>
+				</li>
+				<li>
+					<label class="mdui-list-item mdui-ripple">
+						<div class="mdui-list-item-content">选中选课框</div>
+						<div class="mdui-checkbox mdui-switch">
+							<input type="checkbox"/>
+							<i class="mdui-switch-icon"></i>
+						</div>
+					</label>
+				</li>
+				<li>
+					<label class="mdui-list-item mdui-ripple">
+						<div class="mdui-list-item-content">自动提交选课</div>
+						<div class="mdui-checkbox mdui-switch">
+							<input type="checkbox"/>
+							<i class="mdui-switch-icon"></i>
+						</div>
+					</label>
+				</li>
+			</ul>
+		</li>
+
+		<li class="mdui-collapse-item" id="Module2">
+			<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+				<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-indigo">device_hub</i>
+				<div class="mdui-list-item-content">自动计算学分</div>
+				<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+			</div>
+			<ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+				<a href="https://alphanut.cn/HDU-GO" target="__blank" style="display: block; height: 100%; width: 100%;"><li class="mdui-list-item mdui-ripple">查看使用方法</li></a>
+				</li>
+				<li>
+					<label class="mdui-list-item mdui-ripple">
+						<div class="mdui-list-item-content">功能开启</div>
+						<div class="mdui-checkbox mdui-switch">
+							<input type="checkbox"/>
+							<i class="mdui-switch-icon"></i>
+						</div>
+					</label>
+				</li>
+			</ul>
+		</li>
+
+		<li class="mdui-collapse-item" id="Module3">
+			<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+				<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">touch_app</i>
+				<div class="mdui-list-item-content">自动学评教</div>
+				<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+			</div>
+			<ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+				<a href="https://alphanut.cn/HDU-GO" target="__blank" style="display: block; height: 100%; width: 100%;"><li class="mdui-list-item mdui-ripple">查看使用方法</li></a>
+				<li>
+					<label class="mdui-list-item mdui-ripple">
+						<div class="mdui-list-item-content">功能开启</div>
+						<div class="mdui-checkbox mdui-switch">
+							<input type="checkbox"/>
+							<i class="mdui-switch-icon"></i>
+						</div>
+					</label>
+				</li>
+				<li>
+					<label class="mdui-list-item mdui-ripple mdui-radio">
+						<div class="mdui-list-item-content">9A + 1B</div>
+						<div class="mdui-checkbox mdui-switch">
+							<input type="radio" name="level" />
+							<i class="mdui-radio-icon"></i>
+						</div>
+					</label>
+				</li>
+				<li>
+					<label class="mdui-list-item mdui-ripple mdui-radio">
+						<div class="mdui-list-item-content">9B + 1C</div>
+						<div class="mdui-checkbox mdui-switch">
+							<input type="radio" name="level"/>
+							<i class="mdui-radio-icon"></i>
+						</div>
+					</label>
+				</li>
+				<li>
+					<label class="mdui-list-item mdui-ripple mdui-radio">
+						<div class="mdui-list-item-content">9C + 1D</div>
+						<div class="mdui-checkbox mdui-switch">
+							<input type="radio" name="level"/>
+							<i class="mdui-radio-icon"></i>
+						</div>
+					</label>
+				</li>
+				<li>
+					<label class="mdui-list-item mdui-ripple mdui-radio">
+						<div class="mdui-list-item-content">9D + 1C</div>
+						<div class="mdui-checkbox mdui-switch">
+							<input type="radio" name="level" disabled />
+							<i class="mdui-radio-icon"></i>
+						</div>
+					</label>
+				</li>
+			</ul>
+		</li>
+
+		<div class="mdui-divider"></div>
+
+		<li class="mdui-list-item mdui-ripple" id="checkUpdate">
+			<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">system_update_alt</i>
+			<div class="mdui-list-item-content" id="versionContent"></div>
+		</li>
+	</ul>
+</body>
+</html>
