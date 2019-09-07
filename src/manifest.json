@@ -52,6 +52,14 @@
 			"js": ["js/utils.js", "js/xsxk.js"],
 			"run_at": "document_start",
 			"all_frames": true
+		},
+		{
+			"matches": [
+				"https://hdu.huitu.zhishulib.com/404"
+			],
+			"js": ["js/utils.js", "js/huitu.js"],
+			"run_at": "document_start",
+			"all_frames": true
 		}
 	],
 	"background": { 
