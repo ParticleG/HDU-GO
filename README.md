@@ -1,5 +1,9 @@
 # HDU-GO
 
+#### 官网
+
+[https://alphanut.cn/HDU-GO](https://alphanut.cn/HDU-GO)
+
 #### 介绍
 
 HDU-GO 是一款 Chrome 扩展，具有抢课、自动学评教、自动计算学分、图书馆快速占座（未公开）功能。
