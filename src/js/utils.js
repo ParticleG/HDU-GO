@@ -89,11 +89,18 @@ function addElement(tagName, innerHTML = '', options = {}, fatherEl = document.b
 function readConfig() {
 	return new Promise(resolve => {
 		chrome.storage.sync.get(OPTION, function (option) {
-			// 获取到的option合并到内存里
+			// 获取到的 option 合并到内存里
 			Object.assign(OPTION, option);
 			resolve(option);
 		});
 	});
+}
+
+/**
+ * 保存用户配置
+ */
+function saveConfig(config) {
+	chrome.storage.sync.set(config);
 }
 
 /**
