@@ -4,15 +4,15 @@
    **注意！！！**
    
    每次重新开启屏蔽验证码功能都需要重新启动一下浏览器，主要是为了把 cookie 清空！
-   ![](https://ws2.sinaimg.cn/large/006Xmmmgly1g6r94l7bwuj30al0bcwen.jpg)
+   ![](../../image/006Xmmmgly1g6r94l7bwuj30al0bcwen.jpg)
 2. 进入数字杭电教务系统 -> 网上选课 -> 通识选修课，可以看到多了一个“开启抢课模式”的按钮。而且下方的验证码也直接被消除了。
-   ![](https://ws2.sinaimg.cn/large/006Xmmmggy1g6r9asoj87j310f0hhn19.jpg)
+   ![](../../image/006Xmmmggy1g6r9asoj87j310f0hhn19.jpg)
 
 ### 抢课/捡漏（示范：捡《世说新语》这门课）
 1. 进行上述的基础操作
 2. 在筛选项里填写好你要筛选的条件，确保如果你想捡漏的课程有余课的话，一定会出现在表格里。
-   ![](https://ws4.sinaimg.cn/large/006Xmmmgly1g6r9h6o5jij310h0drn0r.jpg)
+   ![](../../image/006Xmmmgly1g6r9h6o5jij310h0drn0r.jpg)
 3. 点击“开启抢课模式”，页面就会自动刷新，为你查询是否有余课。浏览器不要关闭，这个时候你可以去安心做你的事情。
-   ![](https://ws3.sinaimg.cn/large/006Xmmmgly1g6r9tp17zgg310r0hdak3.gif)
+   ![](../../image/006Xmmmgly1g6r9tp17zgg310r0hdak3.gif)
 4. 当出现有余课，程序会自动给你抢到碗里来~
-   ![](https://ws3.sinaimg.cn/large/006Xmmmggy1g6r9tphre4g30z70hiau2.gif)
+   ![](../../image/006Xmmmggy1g6r9tphre4g30z70hiau2.gif)
