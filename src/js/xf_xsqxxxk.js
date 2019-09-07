@@ -12,9 +12,8 @@
 const ENABLE = location.hash.includes('enable');
 
 // 禁用 alert 立即执行
-(async function () {
-	const config = await readConfig();
-	config.disableAlert && disableAlert();
+(function () {
+	disableAlert();
 }) ();
 
 // 入口

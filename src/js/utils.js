@@ -8,7 +8,6 @@
  */
 const OPTION = {
 	/* 抢课设置 */
-	disableAlert:	false,
 	disableCaptcha:	false,
 
 	/* 自动计算学分设置 */
