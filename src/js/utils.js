@@ -28,7 +28,7 @@ const OPTION = {
 const ENABLE = location.hash.includes('enable');
 
 /**
- * 屏蔽信息框
+ * 屏蔽信息框，仅屏蔽忽略 tipList 中的提示，其他提示语按照 alert 弹出
  * 必须在 "run_at": "document_start" 时注入才能生效
  */
 function disableAlert() {
@@ -37,7 +37,11 @@ function disableAlert() {
 		`
 			window._alert = window.alert;
 			window.alert = (text) => {
-				console.log(text);
+				const tipList = ['验证码不正确', '人数超过限制'];
+				if (!tipList.some(item => text.includes(item))) {
+					window._alert(text);
+					return;
+				}
 				window.onload = () => {
 					const div = document.createElement('div');
 					div.innerHTML = text;
