@@ -22,6 +22,12 @@ const OPTION = {
 }
 
 /**
+ * 当前页面抢课功能是否启用
+ * 通过 hash 进行标记
+ */
+const ENABLE = location.hash.includes('enable');
+
+/**
  * 屏蔽信息框
  * 必须在 "run_at": "document_start" 时注入才能生效
  */

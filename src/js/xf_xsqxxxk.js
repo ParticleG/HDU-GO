@@ -12,7 +12,11 @@
 
 window.onload = async () => {
 	disableCaptcha();
-	const config = await readConfig();
+	renderCtrlBtn();
+
+	if (!ENABLE) {
+		return;
+	}
 
 	if (document.querySelector('#kcmcGrid').innerHTML.length > 300) {
 		// 选中选课框
@@ -28,8 +32,23 @@ window.onload = async () => {
 		addElement('div', '', {
 			style: 'height: 5px; background: #cadaee; animation: loading 1.5s'
 		});
-		setTimeout(() => {
-			document.querySelector('input#Button2').click();
-		}, 1500);
+		// setTimeout(() => {
+		// 	searchClass();
+		// }, 1500);
 	}
 };
+
+function renderCtrlBtn() {
+	addElement('button', `${ENABLE ? '关闭' : '开启'}抢课模式`, {
+		onclick: function (e) {
+			e.preventDefault();
+			location.hash = ENABLE ? '' : '#enable';
+			document.querySelector('form[name="xsyxxxk_form"]').action += ENABLE ? '' : '#enable';
+			!ENABLE && searchClass();
+		}
+	}, document.querySelector('#Button2').parentElement);
+}
+
+function searchClass() {
+	document.querySelector('input#Button2').click();
+}
