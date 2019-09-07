@@ -64,7 +64,7 @@ function disableAlert() {
 function disableCaptcha() {
   const img = document.querySelector('img[src="CheckCode.aspx"]');
   img.removeAttribute('src');
-  img.parentElement.innerHTML = 'HDU-GO 为您屏蔽了验证码，初次使用本功能时请重新启动浏览器确保功能生效。';
+  img.parentElement.innerHTML = 'HDU-GO 为您屏蔽了验证码，每次重新开启屏蔽验证码功能都请重新启动浏览器确保功能生效。';
 }
 
 /**
