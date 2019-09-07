@@ -16,7 +16,10 @@ const CREDIT_INDEX = {
 
 // 入口
 window.onload = async () => {
-  const config = await readConfig();
+	const config = await readConfig();
+	if (!config.countCredit) {
+		return;
+	}
 
 	// 不同页面的表格 id 不同，学分所在的列也不同，自动适配下
 	const tableId = TABLE_ID[location.pathname];

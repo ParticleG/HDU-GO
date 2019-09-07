@@ -4,6 +4,7 @@
 
 /**
  * 默认设置
+ * （外部脚本请勿直接访问此变量，获取配置通过 const config = await readConfig(); 进行获取）
  */
 const OPTION = {
 	/* 抢课设置 */
@@ -13,12 +14,6 @@ const OPTION = {
 	/* 自动计算学分设置 */
 	countCredit	:	false,
 }
-
-/**
- * 当前页面抢课功能是否启用
- * 通过 hash 进行标记
- */
-const ENABLE = location.hash.includes('enable');
 
 /**
  * 屏蔽信息框，仅屏蔽忽略 tipList 中的提示，其他提示语按照 alert 弹出

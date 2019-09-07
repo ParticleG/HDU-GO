@@ -5,14 +5,22 @@
 
 'use strict';
 
+/**
+ * 当前页面抢课功能是否启用
+ * 通过 hash 进行标记
+ */
+const ENABLE = location.hash.includes('enable');
+
 // 禁用 alert 立即执行
-(function () {
-	disableAlert();
+(async function () {
+	const config = await readConfig();
+	config.disableAlert && disableAlert();
 }) ();
 
 // 入口
 window.onload = async () => {
-	disableCaptcha();
+	const config = await readConfig();
+	config.disableCaptcha && disableCaptcha();
 	renderForm();
 	renderCtrlBtn();
 

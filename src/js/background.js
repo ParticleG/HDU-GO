@@ -5,7 +5,10 @@
  */
 (async function () {
   const config = await readConfig();
-  console.log('config in background >>> ', config);
+  if (!config.disableCaptcha) {
+    return;
+  }
+
   chrome.webRequest.onBeforeRequest.addListener(
     function () {
       return { cancel: true };
