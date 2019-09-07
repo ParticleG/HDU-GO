@@ -30,9 +30,41 @@
 	const { date, content } = await getNotice();
 	noticeBoard.querySelector('.mdui-card-header-subtitle').innerText = date;
 	noticeBoard.querySelector('.mdui-card-content').innerHTML = content;
+
+	// 检查更新
+	checkUpdate();
+	document.querySelector('#version').onclick = checkUpdate;
 }) ();
 
 async function getNotice() {
 	const response = await fetch('https://www.alphanut.cn/HDU-GO/index.php?method=getNotice');
 	return await response.json();
+}
+
+async function getLatestVersion(version) {
+	const response = await fetch(`https://www.alphanut.cn/HDU-GO/index.php?method=getVersion&version=${version}`);
+	return await response.json();
+}
+
+async function checkUpdate() {
+	const { version } = chrome.app.getDetails();
+	const res = await getLatestVersion(version);
+	const { version: latestVersion, log } = res;
+	if (latestVersion && latestVersion !== version) {
+		chrome.notifications.create(null,
+			{
+				type: 'basic',
+				iconUrl: 'img/icon.png',
+				title: `发现新版本${latestVersion}`,
+				message: `更新日志：${log}`,
+				buttons: [{title: '确定更新', iconUrl: ''}]
+			},
+			function () {
+				chrome.notifications.onButtonClicked.addListener(function (notificationId) {
+					window.open('https://alphanut.cn/HDU-GO/index.php');
+					chrome.notifications.clear(notificationId);
+				});
+			}
+		);
+	}
 }
