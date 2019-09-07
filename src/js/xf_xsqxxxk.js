@@ -41,7 +41,10 @@ function renderCtrlBtn() {
 			e.preventDefault();
 
 			location.hash = ENABLE ? '' : '#enable';
-			document.querySelector('form[name="xsyxxxk_form"]').action += ENABLE ? '' : '#enable';
+			const form = document.querySelector('form[name="xsyxxxk_form"]');
+			form.action = ENABLE ? form.action.replace('#enable', '') : `${form.action}#enable`;
+
+			// 开启抢课模式自动再搜索一次课
 			!ENABLE && searchClass();
 		}
 	}, document.querySelector('#Button2').parentElement);
