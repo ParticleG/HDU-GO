@@ -39,10 +39,16 @@ window.onload = async () => {
 	}
 };
 
+/**
+ * 改变表单的 action，添加页面标记
+ */
 function renderForm() {
 	document.querySelector('form[name="xsyxxxk_form"]').action += ENABLE ? '#enable' : '';
 }
 
+/**
+ * 渲染控制按钮
+ */
 function renderCtrlBtn() {
 	addElement('button', `${ENABLE ? '关闭' : '开启'}抢课模式`, {
 		onclick: function (e) {
@@ -59,14 +65,23 @@ function renderCtrlBtn() {
 	}, document.querySelector('#Button2').parentElement);
 }
 
+/**
+ * 选中选课框
+ */
 function checkBox() {
 	document.querySelector('#kcmcGrid').querySelector('input').checked = true;
 }
 
+/**
+ * 提交选课
+ */
 function submitForm() {
 	document.querySelector('#Button1').click();
 }
 
+/**
+ * 添加 loading 条
+ */
 function addLoadingBar() {
 	addElement('style', `
 		@keyframes loading {
@@ -78,6 +93,9 @@ function addLoadingBar() {
 	});
 }
 
+/**
+ * 点击搜索按钮
+ */
 function searchClass() {
 	document.querySelector('input#Button2').click();
 }
