@@ -14,6 +14,7 @@ const CREDIT_INDEX = {
 	'/xsxkqk.aspx': 5,
 };
 
+// 入口
 window.onload = async () => {
   const config = await readConfig();
 
@@ -30,7 +31,7 @@ window.onload = async () => {
 	document.querySelector(`#${tableId}`)
 		.querySelector('tr')
 		.querySelectorAll('td')[creditIndex]
-		.innerHTML += `<br />合计: ${creditSum}`;
+		.innerHTML += `<br /><br />合计: ${creditSum}`;
 }
 
 

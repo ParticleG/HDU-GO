@@ -10,6 +10,7 @@
 	disableAlert();
 }) ();
 
+// 入口
 window.onload = async () => {
 	disableCaptcha();
 	renderForm();

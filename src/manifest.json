@@ -17,15 +17,6 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"*://jxgl.hdu.edu.cn/xs_main.aspx*",
-				"*://jxglteacher.hdu.edu.cn/xs_main.aspx*"
-			],
-			"js": ["js/utils.js", "js/xs_main.js"],
-			"run_at": "document_start",
-			"all_frames": true
-		},
-		{
-			"matches": [
 				"*://jxgl.hdu.edu.cn/xf_xsqxxxk.aspx*",
 				"*://jxglteacher.hdu.edu.cn/xf_xsqxxxk.aspx*"
 			],
