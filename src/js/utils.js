@@ -6,19 +6,12 @@
  * 默认设置
  */
 const OPTION = {
-	/*学评教模块设置*/
-	ctrl_AutoXuePingJiao	:	false,
-	value_XuePingJiaoDegree	:	1,
+	/* 抢课设置 */
+	disableAlert:	false,
+	disableCaptcha:	false,
 
-	/*通识选修课抢课设置*/
-	ctrl_AutoConfirm		:	false,
-	ctrl_AutoRefresh		:	false,
-	ctrl_DisableCaptcha		:	true,
-	ctrl_ChooseCheckbox		:	false,
-	value_RefreshTime		:	1000,
-
-	/*自动计算学分设置*/
-	ctrl_CalculateCredit	:	false
+	/* 自动计算学分设置 */
+	countCredit	:	false,
 }
 
 /**
