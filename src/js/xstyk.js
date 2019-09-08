@@ -4,6 +4,7 @@
  */
 
 'use strict';
+blockPopup();
 
 // 禁用 alert 立即执行
 (function () {
@@ -21,18 +22,25 @@ var LESSON = {
 window.onload = async () => {
 	const config = await readConfig();
 	config.disableCaptcha && disableCaptcha();
-	getLessonInfo();
-	if(!LESSON.isAvaliable){
-		repeat();
-	}else{
-		pick();
-	}
+	
 };
+
+getLessonInfo();
+repeat();
+
+function blockPopup(){
+	var actualCode = `window.open = null`;
+	var script = document.createElement('script');
+	script.textContent = actualCode;
+	(document.head||document.documentElement).appendChild(script);
+}
 
 function getLessonInfo(){
 /*从用户点击里得到选课课号、容量及已选人数的信息 */
 	document.addEventListener("click", function(tab) {
 		/*判断用户是否点击的是选课按钮，选课按钮id通常为空*/
+		var reg ="‖\\d+‖\\d+‖"
+		var tempInfo
 		if(tab.path[0].value.length == 63){
 			LESSON.lessonNumber = String(tab.path[0].value)
 			console.log(LESSON.lessonNumber)
@@ -42,12 +50,13 @@ function getLessonInfo(){
 			if(LESSON.capacityNumber > LESSON.takenNumber){
 				console.log('the class is avalialble')
 				LESSON.isAvaliable = true
+				pick();
 			}else{
 				console.log('capacity:'+LESSON.capacityNumber+',taken:'+LESSON.takenNumber + '. the class is not avalialble, refreshing...')
 				LESSON.isAvaliable = false
 				setTimeout(function(){
 					chrome.storage.sync.set(LESSON);
-					$('#Button4').eq(0).click();
+					document.querySelector('input#Button4').click();
 				}, 1500);
 			}
 		}
@@ -65,7 +74,7 @@ function repeat(){
 
 function pick(){
 	/*默认点击“不选中教材”*/
-	$("#RadioButtonList1_1").eq(0).click();
+	document.querySelector('input#RadioButtonList1_1').click();
 	/*点击“选定”*/
-	$('#button3').eq(0).click();
+	document.querySelector('input#button3').click();
 }
