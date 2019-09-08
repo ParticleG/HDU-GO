@@ -10,7 +10,7 @@ var LESSON = {
 	capacityNumber			:	0,
 	takenNumber				:	0,
 	isAvaliable				:	false
-}
+};
 
 // 禁用 alert 立即执行
 (function () {
@@ -21,13 +21,10 @@ var LESSON = {
 window.onload = async () => {
 	const config = await readConfig();
 	config.disableCaptcha && disableCaptcha();
-	getLessonInfo();
-	if(!LESSON.isAvaliable){
-		repeat();
-	}else{
-		pick();
-	}
 };
+
+getLessonInfo();
+repeat();
 
 function getLessonInfo(){
 	/*从用户点击里得到选课课号、容量及已选人数的信息 */
@@ -40,7 +37,7 @@ function getLessonInfo(){
 			if(LESSON.capacityNumber > LESSON.takenNumber){
 				console.log('the class is avalialble')
 				LESSON.isAvaliable = true
-				readConfig();
+				pick();
 			}else{
 				console.log('capacity:'+LESSON.capacityNumber+',taken:'+LESSON.takenNumber + 'the class is not avalialble, refreshing...')
 				LESSON.isAvaliable = false
@@ -49,7 +46,7 @@ function getLessonInfo(){
 					chrome.storage.sync.set(LESSON);
 					window.location.hash = 'reload';
 					window.location.reload();
-				}, OPTION.value_RefreshTime);
+				}, 1500);
 			}
 		}
 		

@@ -15,7 +15,7 @@ var LESSON = {
 	capacityNumber			:	0,
 	takenNumber				:	0,
 	isAvaliable				:	false
-}
+};
 
 // 入口
 window.onload = async () => {
