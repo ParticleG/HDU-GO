@@ -4,7 +4,6 @@
  */
 
 'use strict';
-blockPopup();
 
 // 禁用 alert 立即执行
 (function () {
@@ -22,9 +21,9 @@ var LESSON = {
 window.onload = async () => {
 	const config = await readConfig();
 	config.disableCaptcha && disableCaptcha();
-	
 };
 
+blockPopup();
 getLessonInfo();
 repeat();
 
