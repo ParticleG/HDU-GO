@@ -13,6 +13,23 @@
 // 入口
 window.onload = async () => {
 	const config = await readConfig();
-  config.disableCaptcha && disableCaptcha();
-
+	config.disableCaptcha && disableCaptcha();
+	getLessonInfo();
+	if(!LESSON.isAvaliable){
+		repeat();
+	}else{
+		pick();
+	}
 };
+
+function getLessonInfo(){
+
+}
+
+function repeat(){
+
+}
+
+function pick(){
+	
+}
