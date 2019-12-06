@@ -2,7 +2,7 @@
 
 #### 官网
 
-[https://alphanut.cn/HDU-GO](https://alphanut.cn/HDU-GO)
+[https://mzl980425.gitee.io/hdu-go/](https://mzl980425.gitee.io/hdu-go/)
 
 #### 介绍
 
@@ -16,12 +16,12 @@ HDU-GO 按照 Chrome 官方开发文档进行开发而成，完美支持各类�
 
 选择你所使用的浏览器查看安装步骤：
 
-1. [Chrome](./doc/install/Chrome.md)
-2. [MS Edge Dev（同 Chrome）](./doc/install/Chrome.md)
-3. [QQ浏览器](./doc/install/QQBrowser.md)
-4. [搜狗浏览器](./doc/install/SogouExplorer.md)
-5. [360极速浏览器（同搜狗）](./doc/install/SogouExplorer.md)
-6. [360安全浏览器（同搜狗）](./doc/install/SogouExplorer.md)
+1. [Chrome](//mzl980425.gitee.io/hdu-go/#/install/chrome)
+2. [MS Edge Dev（同 Chrome）](//mzl980425.gitee.io/hdu-go/#/install/chrome)
+3. [QQ浏览器](//mzl980425.gitee.io/hdu-go/#/install/qq)
+4. [搜狗浏览器](//mzl980425.gitee.io/hdu-go/#/install/sogou)
+5. [360极速浏览器（同搜狗）](//mzl980425.gitee.io/hdu-go/#/install/sogou)
+6. [360安全浏览器（同搜狗）](//mzl980425.gitee.io/hdu-go/#/install/sogou)
 
 其他浏览器安装步骤估计差不多，请自行尝试。
 
@@ -31,10 +31,10 @@ HDU-GO 按照 Chrome 官方开发文档进行开发而成，完美支持各类�
 
 使用的是QQ、搜狗、360浏览器等国产双模式渲染的浏览器，请务必切换成 **高速模式** 才能使用浏览器扩展功能。
 
-1. [抢课 - 通识选修课](./doc/usage/pickLesson_ts.md)
-2. 抢课 - 普通理论课（BETA）
-3. 抢课 - 体育课（BETA）
-4. [自动计算学分](./doc/usage/countCredit.md)
+1. [抢课 - 通识选修课](//mzl980425.gitee.io/hdu-go/#/usage/tsxxk)
+2. 抢课 - 普通理论课（待更新）
+3. 抢课 - 体育课（待更新）
+4. [自动计算学分](//mzl980425.gitee.io/hdu-go/#/usage/count-credit)
 5. 杭电图书馆一键占座（BETA）（待更新）
 
 #### 参与贡献
