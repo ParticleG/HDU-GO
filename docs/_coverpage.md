@@ -4,5 +4,5 @@
 
 > 身在杭电必用的Chrome插件！
 
-[Gitee](https://gitee.com/mzl980425/HDU-GO)
+[立即下载](https://gitee.com/mzl980425/HDU-GO/releases)
 [使用教程](README)
