@@ -8,10 +8,13 @@
  */
 const OPTION = {
 	/* 抢课设置 */
-	disableCaptcha:	false,
+	disableCaptcha: false,
 
 	/* 自动计算学分设置 */
-	countCredit	:	false,
+	countCredit: false,
+
+	/* 自动计算学分设置 */
+	autoRate: false,
 }
 
 /**

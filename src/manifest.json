@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "HDU-GO",
-	"version": "19.0907",
+	"version": "19.1212",
 	"description": "身在杭电必用的Chrome插件！",
 	"homepage_url": "https://alphanut.cn/HDU-GO",
 	"icons": {
@@ -15,6 +15,15 @@
 		"default_popup": "popup.html"
 	},
 	"content_scripts": [
+		{
+			"matches": [
+				"*://jxgl.hdu.edu.cn/xs_main.aspx?xh=*",
+				"*://jxgl.hdu.edu.cn/xsjxpj.aspx*"
+			],
+			"js": ["js/utils.js", "js/autoRating.js"],
+			"run_at": "document_start",
+			"all_frames": true
+		},
 		{
 			"matches": [
 				"*://jxgl.hdu.edu.cn/xf_xsqxxxk.aspx*",
