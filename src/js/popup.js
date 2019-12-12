@@ -25,8 +25,11 @@
 	// 填充版本号
 	document.querySelector('#version').innerText = `版本：${manifest.version}`;
 
+	//TODO: 继承栗子的项目，使用自己的服务器实现公告和更新功能
 	// 公告板相关
 	const noticeBoard = document.querySelector('#noticeBoard');
+
+	/*
 	const { date, content } = await getNotice();
 	noticeBoard.querySelector('.mdui-card-header-subtitle').innerText = date;
 	noticeBoard.querySelector('.mdui-card-content').innerHTML = content;
@@ -34,6 +37,7 @@
 	// 检查更新
 	checkUpdate();
 	document.querySelector('#version').onclick = checkUpdate;
+    */
 }) ();
 
 async function getNotice() {

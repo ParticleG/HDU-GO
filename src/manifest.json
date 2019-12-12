@@ -17,7 +17,8 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"*://jxgl.hdu.edu.cn/xs_main.aspx?xh=*"
+				"*://jxgl.hdu.edu.cn/xs_main.aspx?xh=*",
+				"*://jxgl.hdu.edu.cn/xsjxpj.aspx*"
 			],
 			"js": ["js/utils.js", "js/autoRating.js"],
 			"run_at": "document_start",
