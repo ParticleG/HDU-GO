@@ -12,4 +12,4 @@
     - [专业课](usage/xsxjs)
     - [体育课](usage/xstyk)
   - [自动计算学分](usage/count-credit)
-  - [自动学评教](usage/why)
+  - [自动学评教](usage/auto-rating)
