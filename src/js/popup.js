@@ -25,11 +25,9 @@
 	// 填充版本号
 	document.querySelector('#version').innerText = `版本：${manifest.version}`;
 
-	//TODO: 继承栗子的项目，使用自己的服务器实现公告和更新功能
 	// 公告板相关
 	const noticeBoard = document.querySelector('#noticeBoard');
 
-	/*
 	const { date, content } = await getNotice();
 	noticeBoard.querySelector('.mdui-card-header-subtitle').innerText = date;
 	noticeBoard.querySelector('.mdui-card-content').innerHTML = content;
@@ -37,22 +35,22 @@
 	// 检查更新
 	checkUpdate();
 	document.querySelector('#version').onclick = checkUpdate;
-    */
 }) ();
 
 async function getNotice() {
-	const response = await fetch('https://www.alphanut.cn/HDU-GO/index.php?method=getNotice');
+	const response = await fetch('https://gitee.com/HDU-STEA/HDU-GO/raw/master/docs/notice.json');
+	console.log(response);
 	return await response.json();
 }
 
-async function getLatestVersion(version) {
-	const response = await fetch(`https://www.alphanut.cn/HDU-GO/index.php?method=getVersion&version=${version}`);
+async function getLatestVersion() {
+	const response = await fetch(`https://gitee.com/HDU-STEA/HDU-GO/raw/master/.version.json`);
 	return await response.json();
 }
 
 async function checkUpdate() {
 	const { version } = chrome.app.getDetails();
-	const res = await getLatestVersion(version);
+	const res = await getLatestVersion();
 	const { version: latestVersion, log } = res;
 	if (latestVersion && latestVersion !== version) {
 		chrome.notifications.create(null,
@@ -65,10 +63,14 @@ async function checkUpdate() {
 			},
 			function () {
 				chrome.notifications.onButtonClicked.addListener(function (notificationId) {
-					window.open('https://alphanut.cn/HDU-GO/index.php');
+					window.open('https://gitee.com/HDU-STEA/HDU-GO/releases');
 					chrome.notifications.clear(notificationId);
 				});
 			}
 		);
+	}
+	else
+	{
+		mdui.snackbar("检查更新完毕，目前已是最新版");
 	}
 }
