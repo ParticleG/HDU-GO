@@ -12,7 +12,9 @@ HDU-GO 是一款 Chrome 扩展，具有抢课、自动学评教、自动计算�
 
 #### 下载
 
-下载地址：https://gitee.com/HDU-STEA/HDU-GO/releases
+### [点击前往Chrome应用商店的应用页面（需要科学上网）](https://chrome.google.com/webstore/detail/hdu-go/gehmlehclpdkeedjlkfpkadglcejfnkj)
+
+Gitee下载地址：https://gitee.com/HDU-STEA/HDU-GO/releases
 
 根据时间顺序取最新版本，在 **『下载』** 中点击 `HDU-GO vXX.XXXX.crx` 进行下载。
 
