@@ -10,23 +10,23 @@
 
 ##### 第二步、进入数字杭电教务系统 -> 网上选课 -> 通识选修课，可以看到在下方多了一个“自动抢课-课程列表”的表单和一个“添加至选课列表”的按钮。而且下方的验证码也直接被消除了。
 
-![course_list](..\image\course_list.jpg)
+![course_list](../image/course_list.jpg)
 
 ##### 第三步、在筛选项里填写好你要筛选的条件，选中你想要抢的课程，之后点击“添加至选课列表”。
 
-![course_list_select](..\image\course_list_select.jpg)
+![course_list_select](../image/course_list_select.jpg)
 
 ##### 第四步、点击上方的“HDU-GO”选项卡并选择“自动抢课”，页面就会自动刷新，为你查询是否有余课。浏览器不要关闭，这个时候你可以去安心做你的事情。
 
-![auto_select_course_start](..\image\auto_select_course_start.gif)
+![auto_select_course_start](../image/auto_select_course_start.gif)
 
 ##### 第五步、当抢课列表中的任意课程出现余课，程序会自动给你抢到碗里来~你可以再次点击“HDU-GO”选项卡中的“自动抢课”选项来停止自动抢课（可以同时抢抢课列表中的全部课程，此处不做演示）
 
-![auto_select_course_stop](..\image\auto_select_course_stop.gif)
+![auto_select_course_stop](../image/auto_select_course_stop.gif)
 
 ##### 第五步、抢课成功~祝大家学习愉快
 
-![course_list_result](..\image\course_list_result.jpg)
+![course_list_result](../image/course_list_result.jpg)
 
 
 
