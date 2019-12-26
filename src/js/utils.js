@@ -65,9 +65,9 @@ function disableAlert() {
  * 屏蔽验证码图片
  */
 function disableCaptcha() {
-  const img = document.querySelector('img[src="CheckCode.aspx"]');
-  img.removeAttribute('src');
-  img.parentElement.innerHTML = 'HDU-GO 为您屏蔽了验证码，每次重新开启屏蔽验证码功能都请重新启动浏览器确保功能生效。';
+	const img = document.querySelector('img[src="CheckCode.aspx"]');
+	img.removeAttribute('src');
+	img.parentElement.innerHTML = 'HDU-GO 为您屏蔽了验证码，每次重新开启屏蔽验证码功能都请重新启动浏览器确保功能生效。';
 }
 
 /**
@@ -78,10 +78,10 @@ function disableCaptcha() {
  * @param {HTMLElement} fatherEl 父元素，默认为 body
  */
 function addElement(tagName, innerHTML = '', options = {}, fatherEl = document.body) {
-  const el = document.createElement(tagName);
-  el.innerHTML = innerHTML;
-  Object.assign(el, options);
-  fatherEl.appendChild(el);
+	const el = document.createElement(tagName);
+	el.innerHTML = innerHTML;
+	Object.assign(el, options);
+	fatherEl.appendChild(el);
 }
 
 /**

@@ -19,7 +19,6 @@ window.onload = async () => {
     {
         return;
     }
-    renderCtrlBtn();
     if(localStorage.getItem("Rating") == "true" && (document.querySelectorAll("select").length > 1)) {
         iFrameRating();
     }
@@ -46,6 +45,8 @@ function injectAlertDisabler() {
 /**
  * 渲染控制按钮
  */
+
+/*
 function renderCtrlBtn() {
     if(document.querySelector('.nav') == undefined) {
         return;
@@ -72,6 +73,8 @@ function renderCtrlBtn() {
         id:"autoRating_span"
 	}, document.querySelector('#autoRating_a'));
 }
+*/
+
 /**
  * 自动评价实现函数
  */
