@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MSS3B48403"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-MSS3B48403');
-</script>
-<link>
-<meta charset="UTF-8" />
-<title>HDU-GO</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta http-equiv="Cache-Control" content="max-age=200" />
-<meta name="description" content="项目描述" />
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAA3lBMVEUAAAD/%0AVyL/VyL/ViL/VyL/VyH/VyL/VyP/VyH/VyP/VyL/VyL/VyL/WCH/VyL/VyL/%0AVyL/VyL/VyP/WCL/ViL/VyL/ViH/VyP/VyH/VSP/VyT/VRz/VSL/ZjP/VyL/%0AVyL/////gVn/1cj/q5D/j2z/eU7/3dL/zLv/oYP/fVP/aDj/YjH/0MH/bD7/%0A49r/s5r/lHL/b0L/9/X/7un/9PD/x7X/nX7/hmD/c0f/xLH/wKz/t6D/m3v/%0AXCn/Wib/vKf/iWT/Xyz/+vj/6OH/2c3/por/jGf/qI3/18r/uaPfhRTRAAAA%0AH3RSTlMA3H5Iv5L3x2JQ8enSuLWLO/rlya6sgl5VMyMSBwWcnV/dQQAABQVJ%0AREFUeNq81F1ywjAMBOC149hx/oEwkEDY+9+y751SjGL5u4A02h1B5DE30xh6%0Ac25Pp/Zs+jBOzfxAEc/Zuo5/6pydn1BV2dHzX360FZRUtWESU1fK08vvcB/4%0AteGOXG6OIu6GHJoLxS4NjlqvPOS64ojdeh7k7Q6xGJhBiBCyzMRCYluYzbIJ%0Azm+YkYkK51eN4cXsXvjCQAUDkvVU0SNRSyUtknRU0yGBoyKHj2qqqvHBRGWT%0A6P8U+0iRBUS8tRkWYDa8s7CIJaEAuqykAPo12AOLCbsgAO0QVs+C/Irffoix%0A152EgSAKwG1IlKjxGtFEk7O03EuBVm6KVvEC8f1fyOwUXNsd6tbE9vvH0rAn%0AO0Mz2UsU6tJKqaJgVSvpAgW7sBKuULirAoYA89HgGiW4/rcpOP+UXEEpKgWM%0AYYbjmY1S2GVWgFTKrYCqgY2S2KVWQNWghtLUfn8Ne36zG3jI9NSbd5u+hz++%0Ajm/3sEPQ6YtY+P78uARrtngTG5ORj3z2bjNa4MkVCW9uBM1jSyQsgvxNUANr%0A1RJprRWSGvozYzd3E/At0BCcjsEzi7xNcJi1f2sxbcymw7ZKwOx/5zjOYCy2%0A7vPdWNyA0Q2F1K9/L0w2e6kaz+8EGc5BvNG9iK0BxZHq2OXGOoUucoTkMmfy%0Aia12fER1KPV47bUJhVZ2Bzhlx+Gh2j+dIAwQc4XU7iFhEq+aB6hyVyLBK1vK%0A6c9Y0UB+GHh89hfjACfWMTRr+u0eUpYh9QXISEgjaPp0BMYBjq19aAZxv2ue%0AqQYgbRVGUclmqSYkYOwzt6JdancPGl/9TDRmDoB4Y6Z/qKkdMI6YYeBDPv2A%0ATE0KCc6EzsY0gG2dI+09VQFOR+3CfhWaBjjXL4Yjrm3YZh+CEwhpaRjgwDpD%0ASk9Ic2R6yDgl+rP4hgHOvpgzo92EYRiKlm0PCKaC9gPu2qa06VpAQEGMjo4B%0AY///Q5M8aZawSdOncJ8QhHBInRvH5gAbBMiB/O1K/5sgBlGYHyhgesWJGcBA%0A3ATB9RdJCBAaHtMRP7MEGPAgVO0A5hVIuqzAC9+GhQ0AxkAFohYYA5YAPW5E%0AuQ3AO7kN0wF3gSXAs2DFOE5JQUgAETk++x3JB8iQmRX7spXtgIsA/l5+3baI%0A0NaIfG8kHycTM0BOR44Yg1NbgJHXBzkKMyMAHCllkHZxbAvQl1IyzO22ZoBU%0AMGzKlBKwBRhLSemZ/QkOoJfycZQdKIIohEOUnJR6wxuPsVQmAPiR8kao0aES%0A65xwSBcTnn8uzyYAXQoE8wstnhXAk1imR5/BIMuAVOD+osma4OruADpa4Ft7%0AYACmsv0YQEwtUZcom+d1kcXpipyQwg0Vpkp/5Jt4uwxQZWEPMObXc5pd1tu8%0AZUyogQOYrueeD/YEi6ptzOoT7OWbejVqzyYvT7plzKSBLnowF6lUlASkZLur%0AzWPK6Rq66bG1TKfX8e50qmaNqg1jZtV3Oms20FW9eylUOi/VOi9Wuy/XO29Y%0AOG/ZuG9aOW/buW9cOm/dum9eO2/f/1ZvhzgAwkAQRUm2EoJbRbj/MRGIEU3T%0AVGz+dE4x4n0eMOCEg0csOOPhIRNPuXjMhnM+HjSKVJftRVC1diGsWjsrYPVG%0AtFqwGsHVOmEAr+5QNQCs770SDz5y4TMfPnQySL342I3P/QyCR4Pk0yB6Nch+%0ADcLnf5Ftln63jKN0T+Q4fs9Yjt/x/P8D/lollw0i+/QAAAAASUVORK5CYII=" type="image/png" />
-<link rel="stylesheet" href="//cdn.bootcss.com/docsify/4.9.4/themes/vue.css" />
+  <link>
+  <meta charset="UTF-8" />
+  <title>HDU-GO</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="Cache-Control" content="max-age=200" />
+  <meta name="description" content="项目描述" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAA3lBMVEUAAAD/%0AVyL/VyL/ViL/VyL/VyH/VyL/VyP/VyH/VyP/VyL/VyL/VyL/WCH/VyL/VyL/%0AVyL/VyL/VyP/WCL/ViL/VyL/ViH/VyP/VyH/VSP/VyT/VRz/VSL/ZjP/VyL/%0AVyL/////gVn/1cj/q5D/j2z/eU7/3dL/zLv/oYP/fVP/aDj/YjH/0MH/bD7/%0A49r/s5r/lHL/b0L/9/X/7un/9PD/x7X/nX7/hmD/c0f/xLH/wKz/t6D/m3v/%0AXCn/Wib/vKf/iWT/Xyz/+vj/6OH/2c3/por/jGf/qI3/18r/uaPfhRTRAAAA%0AH3RSTlMA3H5Iv5L3x2JQ8enSuLWLO/rlya6sgl5VMyMSBwWcnV/dQQAABQVJ%0AREFUeNq81F1ywjAMBOC149hx/oEwkEDY+9+y751SjGL5u4A02h1B5DE30xh6%0Ac25Pp/Zs+jBOzfxAEc/Zuo5/6pydn1BV2dHzX360FZRUtWESU1fK08vvcB/4%0AteGOXG6OIu6GHJoLxS4NjlqvPOS64ojdeh7k7Q6xGJhBiBCyzMRCYluYzbIJ%0Azm+YkYkK51eN4cXsXvjCQAUDkvVU0SNRSyUtknRU0yGBoyKHj2qqqvHBRGWT%0A6P8U+0iRBUS8tRkWYDa8s7CIJaEAuqykAPo12AOLCbsgAO0QVs+C/Irffoix%0A152EgSAKwG1IlKjxGtFEk7O03EuBVm6KVvEC8f1fyOwUXNsd6tbE9vvH0rAn%0AO0Mz2UsU6tJKqaJgVSvpAgW7sBKuULirAoYA89HgGiW4/rcpOP+UXEEpKgWM%0AYYbjmY1S2GVWgFTKrYCqgY2S2KVWQNWghtLUfn8Ne36zG3jI9NSbd5u+hz++%0Ajm/3sEPQ6YtY+P78uARrtngTG5ORj3z2bjNa4MkVCW9uBM1jSyQsgvxNUANr%0A1RJprRWSGvozYzd3E/At0BCcjsEzi7xNcJi1f2sxbcymw7ZKwOx/5zjOYCy2%0A7vPdWNyA0Q2F1K9/L0w2e6kaz+8EGc5BvNG9iK0BxZHq2OXGOoUucoTkMmfy%0Aia12fER1KPV47bUJhVZ2Bzhlx+Gh2j+dIAwQc4XU7iFhEq+aB6hyVyLBK1vK%0A6c9Y0UB+GHh89hfjACfWMTRr+u0eUpYh9QXISEgjaPp0BMYBjq19aAZxv2ue%0AqQYgbRVGUclmqSYkYOwzt6JdancPGl/9TDRmDoB4Y6Z/qKkdMI6YYeBDPv2A%0ATE0KCc6EzsY0gG2dI+09VQFOR+3CfhWaBjjXL4Yjrm3YZh+CEwhpaRjgwDpD%0ASk9Ic2R6yDgl+rP4hgHOvpgzo92EYRiKlm0PCKaC9gPu2qa06VpAQEGMjo4B%0AY///Q5M8aZawSdOncJ8QhHBInRvH5gAbBMiB/O1K/5sgBlGYHyhgesWJGcBA%0A3ATB9RdJCBAaHtMRP7MEGPAgVO0A5hVIuqzAC9+GhQ0AxkAFohYYA5YAPW5E%0AuQ3AO7kN0wF3gSXAs2DFOE5JQUgAETk++x3JB8iQmRX7spXtgIsA/l5+3baI%0A0NaIfG8kHycTM0BOR44Yg1NbgJHXBzkKMyMAHCllkHZxbAvQl1IyzO22ZoBU%0AMGzKlBKwBRhLSemZ/QkOoJfycZQdKIIohEOUnJR6wxuPsVQmAPiR8kao0aES%0A65xwSBcTnn8uzyYAXQoE8wstnhXAk1imR5/BIMuAVOD+osma4OruADpa4Ft7%0AYACmsv0YQEwtUZcom+d1kcXpipyQwg0Vpkp/5Jt4uwxQZWEPMObXc5pd1tu8%0AZUyogQOYrueeD/YEi6ptzOoT7OWbejVqzyYvT7plzKSBLnowF6lUlASkZLur%0AzWPK6Rq66bG1TKfX8e50qmaNqg1jZtV3Oms20FW9eylUOi/VOi9Wuy/XO29Y%0AOG/ZuG9aOW/buW9cOm/dum9eO2/f/1ZvhzgAwkAQRUm2EoJbRbj/MRGIEU3T%0AVGz+dE4x4n0eMOCEg0csOOPhIRNPuXjMhnM+HjSKVJftRVC1diGsWjsrYPVG%0AtFqwGsHVOmEAr+5QNQCs770SDz5y4TMfPnQySL342I3P/QyCR4Pk0yB6Nch+%0ADcLnf5Ftln63jKN0T+Q4fs9Yjt/x/P8D/lollw0i+/QAAAAASUVORK5CYII=" type="image/png" />
+  <link rel="stylesheet" href="//cdn.bootcss.com/docsify/4.9.4/themes/vue.css" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MSS3B48403"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MSS3B48403');
+  </script>
 </head>
 <body>
   <div id="app">加载中，请稍等……</div>
