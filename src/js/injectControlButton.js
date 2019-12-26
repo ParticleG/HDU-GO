@@ -38,25 +38,22 @@ function renderCtrlBtn(config) {
             onclick: function () {
                 switch (document.querySelector("#dqwz").innerText) {
                     case "选普通理论及实验课":
-                        if(localStorage.getItem("Selecting") != "true") {
-                            localStorage.setItem("Selecting", "true");
-                        } else {
-                            alert('已经开始自动抢普通理论及实验课，请勿重复点击开始！');
-                        }
+                        alert("功能未开放！")
                         break;
                     case "选体育课":
                         if(localStorage.getItem("Selecting") != "true") {
+                            if (window.confirm("确定要开始自动抢课吗？")) {
                             localStorage.setItem("Selecting", "true");
+                            alert('自动抢体育课已经开始，请点击你想选择的课程！')
+                            }
                         } else {
-                            alert('已经开始自动抢体育课，请勿重复点击开始！');
+                            if (window.confirm("确定要停止自动抢课吗？")) {
+                                localStorage.setItem("Selecting", "false");
+                            }
                         }
                         break;
                     case "选实践课":
-                        if(localStorage.getItem("Selecting") != "true") {
-                            localStorage.setItem("Selecting", "true");
-                        } else {
-                            alert('已经开始自动抢实践课，请勿重复点击开始！');
-                        }
+                        alert("功能未开放！")
                         break;
                     case "通识选修课":
                         if(localStorage.getItem("Selecting") != "true") {
