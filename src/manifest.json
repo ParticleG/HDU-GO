@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "HDU-GO",
-	"version": "19.1225.3",
+	"version": "19.1227",
 	"description": "身在杭电必用的Chrome插件！",
 	"homepage_url": "https://alphanut.cn/HDU-GO",
 	"icons": {
