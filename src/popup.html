@@ -1,146 +1,149 @@
 <!DOCTYPE html>
 <html lang="zh_cn">
 <head>
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="HDU-GO 万能的数字杭电插件">
-	<title>HDU-GO</title>
-	<link rel="stylesheet" href="lib/mdui/css/mdui.min.css">
-	<link rel="stylesheet" href="css/popup.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="HDU-GO 万能的数字杭电插件">
+    <title>HDU-GO</title>
+    <link rel="stylesheet" href="lib/mdui/css/mdui.min.css">
+    <link rel="stylesheet" href="css/popup.css">
 </head>
 <body>
-	<ul class="mdui-list" mdui-collapse="{accordion: true}">
+<ul class="mdui-list" mdui-collapse="{accordion: true}">
+    <li class="mdui-collapse-item">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">assignment</i>
+            <div class="mdui-list-item-content">HDU-GO 公告板</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+        </div>
+        <div class="mdui-collapse-item-body" id="noticeBoard">
+            <div class="mdui-card-header">
+                <img class="mdui-card-header-avatar" src="http://p.qlogo.cn/gh/628669530/628669530_15/0"/>
+                <div class="mdui-card-header-title">HDU-STEA</div>
+                <div class="mdui-card-header-subtitle">2019-09-07</div>
+            </div>
+            <div class="mdui-card-content">
+                HDU-GO 按照 Chrome 官方开发文档进行开发而成，完美支持现代 Chrome 内核浏览器。
+                <br><br>
+                使用前应确保正在使用浏览器的极速内核模式。
+            </div>
+        </div>
+    </li>
 
-		<li class="mdui-collapse-item">
-			<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-				<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">assignment</i>
-				<div class="mdui-list-item-content">HDU-GO 公告板</div>
-				<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-			</div>
-			<div class="mdui-collapse-item-body" id="noticeBoard">
-				<div class="mdui-card-header">
-					<img class="mdui-card-header-avatar" src="http://p.qlogo.cn/gh/628669530/628669530_15/0" />
-					<div class="mdui-card-header-title">HDU-STEA</div>
-					<div class="mdui-card-header-subtitle">2019-09-07</div>
-				</div>
-				<div class="mdui-card-content">
-					HDU-GO 按照 Chrome 官方开发文档进行开发而成，完美支持现代 Chrome 内核浏览器。
-					<br><br>
-					使用前应确保正在使用浏览器的极速内核模式。
-				</div>
-			</div>
-		</li>
+    <li class="mdui-divider"></li>
 
-		<li class="mdui-divider"></li>
+    <!--
+    <li class="mdui-collapse-item">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">airline_seat_recline_normal</i>
+            <div class="mdui-list-item-content">图书馆占座（BETA）</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+        </div>
+        <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+            <a class="mdui-list-item mdui-ripple" href="https://alphanut.cn/HDU-GO/" target="__blank">
+                查看使用方法
+                <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="https://hdu.huitu.zhishulib.com/404" target="__blank">
+                进入占座页面
+                <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+            </a>
+        </ul>
+    </li>
+   -->
 
-		<!-- 
-		<li class="mdui-collapse-item">
-			<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-				<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">airline_seat_recline_normal</i>
-				<div class="mdui-list-item-content">图书馆占座（BETA）</div>
-				<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-			</div>
-			<ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
-				<a class="mdui-list-item mdui-ripple" href="https://alphanut.cn/HDU-GO/" target="__blank">
-					查看使用方法
-					<i class="mdui-list-item-icon mdui-icon material-icons">link</i>
-				</a>
-				<a class="mdui-list-item mdui-ripple" href="https://hdu.huitu.zhishulib.com/404" target="__blank">
-					进入占座页面
-					<i class="mdui-list-item-icon mdui-icon material-icons">link</i>
-				</a>
-			</ul>
-		</li>
-	   -->
+    <li class="mdui-collapse-item">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-orange">web</i>
+            <div class="mdui-list-item-content">抢课</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+        </div>
+        <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+            <a class="mdui-list-item mdui-ripple"
+               href="https://gitee.com/HDU-STEA/HDU-GO/blob/master/doc/usage/pickLesson.md" target="__blank">
+                查看使用方法
+                <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+            </a>
+            <label class="mdui-list-item mdui-ripple mdui-switch">
+                <div class="mdui-list-item-content">屏蔽验证码</div>
+                <input type="checkbox" name="disableCaptcha" title="重新启动一下浏览器才会真正生效哦！"/>
+                <i class="mdui-switch-icon"></i>
+            </label>
+        </ul>
+    </li>
 
-		<li class="mdui-collapse-item">
-			<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-				<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-orange">web</i>
-				<div class="mdui-list-item-content">抢课</div>
-				<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-			</div>
-			<ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
-				<a class="mdui-list-item mdui-ripple" href="https://gitee.com/HDU-STEA/HDU-GO/blob/master/doc/usage/pickLesson.md" target="__blank">
-					查看使用方法
-					<i class="mdui-list-item-icon mdui-icon material-icons">link</i>
-				</a>
-				<label class="mdui-list-item mdui-ripple mdui-switch">
-					<div class="mdui-list-item-content">屏蔽验证码</div>
-					<input type="checkbox" name="disableCaptcha" title="重新启动一下浏览器才会真正生效哦！" />
-					<i class="mdui-switch-icon"></i>
-				</label>
-			</ul>
-		</li>
+    <li class="mdui-collapse-item">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-indigo">dialpad</i>
+            <div class="mdui-list-item-content">自动计算学分</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+        </div>
+        <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+            <a class="mdui-list-item mdui-ripple"
+               href="https://gitee.com/HDU-STEA/HDU-GO/blob/master/doc/usage/countCredit.md" target="__blank">
+                查看使用方法
+                <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+            </a>
+            <label class="mdui-list-item mdui-ripple mdui-switch">
+                <div class="mdui-list-item-content">启用</div>
+                <input type="checkbox" name="countCredit" title="学分合计藏在选课情况表格表头里哦！"/>
+                <i class="mdui-switch-icon"></i>
+            </label>
+        </ul>
+    </li>
 
-		<li class="mdui-collapse-item">
-			<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-				<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-indigo">dialpad</i>
-				<div class="mdui-list-item-content">自动计算学分</div>
-				<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-			</div>
-			<ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
-				<a class="mdui-list-item mdui-ripple" href="https://gitee.com/HDU-STEA/HDU-GO/blob/master/doc/usage/countCredit.md" target="__blank">
-					查看使用方法
-					<i class="mdui-list-item-icon mdui-icon material-icons">link</i>
-				</a>
-				<label class="mdui-list-item mdui-ripple mdui-switch">
-					<div class="mdui-list-item-content">启用</div>
-					<input type="checkbox" name="countCredit" title="学分合计藏在选课情况表格表头里哦！" />
-					<i class="mdui-switch-icon"></i>
-				</label>
-			</ul>
-		</li>
+    <li class="mdui-collapse-item">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-red">rate_review</i>
+            <div class="mdui-list-item-content">自动学评教</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+        </div>
+        <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+            <a class="mdui-list-item mdui-ripple"
+               href="https://gitee.com/HDU-STEA/HDU-GO/blob/master/doc/usage/countCredit.md" target="__blank">
+                查看使用方法
+                <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+            </a>
+            <label class="mdui-list-item mdui-ripple mdui-switch">
+                <div class="mdui-list-item-content">启用</div>
+                <input type="checkbox" name="autoRate" title="自动评价开关在网页顶栏里哦！"/>
+                <i class="mdui-switch-icon"></i>
+            </label>
+        </ul>
+    </li>
 
-		<li class="mdui-collapse-item">
-			<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-				<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-red">rate_review</i>
-				<div class="mdui-list-item-content">自动学评教</div>
-				<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-			</div>
-			<ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
-				<a class="mdui-list-item mdui-ripple" href="https://gitee.com/HDU-STEA/HDU-GO/blob/master/doc/usage/countCredit.md" target="__blank">
-					查看使用方法
-					<i class="mdui-list-item-icon mdui-icon material-icons">link</i>
-				</a>
-				<label class="mdui-list-item mdui-ripple mdui-switch">
-					<div class="mdui-list-item-content">启用</div>
-					<input type="checkbox" name="autoRate" title="自动评价开关在网页顶栏里哦！" />
-					<i class="mdui-switch-icon"></i>
-				</label>
-			</ul>
-		</li>
+    <li class="mdui-divider"></li>
 
-		<li class="mdui-divider"></li>
+    <li class="mdui-collapse-item">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">info</i>
+            <div class="mdui-list-item-content">关于</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+        </div>
+        <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+            <a class="mdui-list-item mdui-ripple" href="https://hdu-stea.gitee.io/hdu-go/" target="__blank">
+                HDU-GO 官网
+                <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="https://gitee.com/HDU-STEA/HDU-GO" target="__blank">
+                Gitee 开源地址
+                <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="https://jq.qq.com/?_wv=1027&k=5Ne7Fg3" target="__blank">
+                联系开发者
+                <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+            </a>
+            <li class="mdui-list-item mdui-ripple" id="version">
+                版本：yy.mmdd
+            </li>
+        </ul>
+    </li>
 
-		<li class="mdui-collapse-item">
-			<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-				<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">info</i>
-				<div class="mdui-list-item-content">关于</div>
-				<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-			</div>
-			<ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
-				<a class="mdui-list-item mdui-ripple" href="https://hdu-stea.gitee.io/hdu-go/" target="__blank">
-					HDU-GO 官网
-					<i class="mdui-list-item-icon mdui-icon material-icons">link</i>
-				</a>
-				<a class="mdui-list-item mdui-ripple" href="https://gitee.com/HDU-STEA/HDU-GO" target="__blank">
-					Gitee 开源地址
-					<i class="mdui-list-item-icon mdui-icon material-icons">link</i>
-				</a>
-				<a class="mdui-list-item mdui-ripple" href="https://wpa.qq.com/msgrd?v=3&uin=3463569823&site=qq&menu=yes" target="__blank">
-					联系开发者
-					<i class="mdui-list-item-icon mdui-icon material-icons">link</i>
-				</a>
-				<li class="mdui-list-item mdui-ripple" id="version">
-					版本：yy.mmdd
-				</li>
-			</ul>
-		</li>
-
-	</ul>
-	<script src="lib/mdui/js/mdui.min.js"></script>	
-	<script src="js/utils.js"></script>
-	<script src="js/popup.js"></script>
+</ul>
+<script src="lib/mdui/js/mdui.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/popup.js"></script>
 </body>
 </html>
