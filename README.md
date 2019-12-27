@@ -1,6 +1,6 @@
 # HDU-GO
 
-<img src="./docs/image/logo.png" alt="logo" width="400px" />
+<img src="./docs/image/logo.png" alt="logo" style="align: center;" width="300px" />
 
 #### 官网
 
