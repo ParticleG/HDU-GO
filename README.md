@@ -1,13 +1,12 @@
 # HDU-GO
 
-
-
 #### 官网
 
 https://hdu-stea.gitee.io/hdu-go/
 
 #### 介绍
-<img src="./docs/image/logo.png" alt="logo" align='center' width="300px" />
+
+<img src="./image/logo.png" alt="logo" align='center' width="300px" />
 
 HDU-GO 是一款 Chrome 扩展，具有抢课、自动学评教、自动计算学分等功能。
 
@@ -56,3 +55,8 @@ HDU-GO 按照 Chrome 官方开发文档进行开发而成，完美支持各类�
 2. 新建 Feat_xxx 分支
 3. 提交代码
 4. 新建 Pull Request
+
+#### 特别声明
+
+1. HDU-GO是一款**完全开源，完全免费**的chrome插件，任何售卖本插件的行为都是非法的
+2. 我社(HDU-STEA)开发本插件的目的是**改善同学们的选课体验，让同学们有更多机会选择自己向往的课程**，而不是方便**某些人利用脚本“捡漏”并囤课出售**的行为。我们强烈谴责**使用本插件囤课并非法牟利等**行为。希望同学们能和我们一起制止此类行为的发生，或者向我们提出宝贵的改进意见。
