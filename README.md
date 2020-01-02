@@ -6,7 +6,7 @@ https://hdu-stea.gitee.io/hdu-go/
 
 #### 介绍
 
-<img src="./image/logo.png" alt="logo" align='center' width="300px" />
+<img src="./docs/image/logo.png" alt="logo" align='center' width="300px" />
 
 HDU-GO 是一款 Chrome 扩展，具有抢课、自动学评教、自动计算学分等功能。
 
