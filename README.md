@@ -52,8 +52,8 @@ HDU-GO 按照 Chrome 官方开发文档进行开发而成，完美支持各类�
 #### 参与贡献
 
 1. Fork 本仓库
-2. 新建 Feat_xxx 分支
-3. 提交代码
+2. 新建 dev_by_xxx 分支
+3. 加入[HDU-GO 官方讨论交流群](https://jq.qq.com/?_wv=1027&k=5Ne7Fg3)
 4. 新建 Pull Request
 
 #### 特别声明
