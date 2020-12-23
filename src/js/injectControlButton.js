@@ -1,50 +1,50 @@
 // 入口
 window.onload = async () => {
     const config = await readConfig();
-    localStorage.setItem("Selecting","false");
-	renderCtrlBtn(config);
+    localStorage.setItem("Selecting", "false");
+    renderCtrlBtn(config);
 };
 
 function renderCtrlBtn(config) {
-	if(document.querySelector('.nav') == undefined) {
-		return;
-	}
-	addElement('li', ``, {
-		id:"hduGO_li",
-		className:"top"
-	}, document.querySelector('.nav'));
-	addElement('a', ``, {
-		href:"javascript:void(0);",
-		id:"hduGO_a",
-		className:"top_link"
-	}, document.querySelector('#hduGO_li'));
-	addElement('span', `HDU-GO`, {
-		id: "hduGO_span",
-		className: "down"
-    }, document.querySelector('#hduGO_a'));
-    
-	addElement('ul', ``, {
-		href:"javascript:void(0);",
-		id:"hduGO_ul",
-		className:"sub"
+    if (document.querySelector('.nav') === undefined) {
+        return;
+    }
+    addElement('li', ``, {
+        id: "hduGO_li",
+        className: "top"
+    }, document.querySelector('.nav'));
+    addElement('a', ``, {
+        href: "javascript:void(0);",
+        id: "hduGO_a",
+        className: "top_link"
     }, document.querySelector('#hduGO_li'));
-    if(config.disableCaptcha) {
+    addElement('span', `HDU-GO`, {
+        id: "hduGO_span",
+        className: "down"
+    }, document.querySelector('#hduGO_a'));
+
+    addElement('ul', ``, {
+        href: "javascript:void(0);",
+        id: "hduGO_ul",
+        className: "sub"
+    }, document.querySelector('#hduGO_li'));
+    if (config.disableCaptcha) {
         addElement('li', ``, {
-            id:"autoSelectCourse_li",
-            className:"top"
+            id: "autoSelectCourse_li",
+            className: "top"
         }, document.querySelector('#hduGO_ul'));
         addElement('a', `自动抢课`, {
-            href:"javascript:void(0);",
+            href: "javascript:void(0);",
             onclick: function () {
                 switch (document.querySelector("#dqwz").innerText) {
                     case "选普通理论及实验课":
                         alert("功能未开放！")
                         break;
                     case "选体育课":
-                        if(localStorage.getItem("Selecting") != "true") {
+                        if (localStorage.getItem("Selecting") !== "true") {
                             if (window.confirm("确定要开始自动抢课吗？")) {
-                            localStorage.setItem("Selecting", "true");
-                            alert('自动抢体育课已经开始，请点击你想选择的课程！')
+                                localStorage.setItem("Selecting", "true");
+                                alert('自动抢体育课已经开始，请点击你想选择的课程！')
                             }
                         } else {
                             if (window.confirm("确定要停止自动抢课吗？")) {
@@ -56,7 +56,7 @@ function renderCtrlBtn(config) {
                         alert("功能未开放！")
                         break;
                     case "通识选修课":
-                        if(localStorage.getItem("Selecting") != "true") {
+                        if (localStorage.getItem("Selecting") !== "true") {
                             if (window.confirm("确定要开始自动抢课吗？")) {
                                 document.querySelector("#iframeautoheight").contentDocument.querySelector('[name=ddl_kcxz]').value = "";
                                 document.querySelector("#iframeautoheight").contentDocument.querySelector('[name=ddl_ywyl]').value = "";
@@ -77,25 +77,28 @@ function renderCtrlBtn(config) {
                         break;
                 }
             },
-            id:"autoSelectCourse_a"
+            id: "autoSelectCourse_a"
         }, document.querySelector('#autoSelectCourse_li'));
     }
-    if(config.autoRate){
+    if (config.autoRate) {
         addElement('li', ``, {
-            id:"autoRating_li",
-            className:"top"
+            id: "autoRating_li",
+            className: "top"
         }, document.querySelector('#hduGO_ul'));
         addElement('a', `自动评价`, {
-            href:"javascript:void(0);",
+            href: "javascript:void(0);",
             onclick: function () {
-                if(localStorage.getItem("Rating") != "true") {
+                if (localStorage.getItem("Rating") !== "true") {
                     localStorage.setItem("Rating", "true");
-                    document.querySelector('[href="xsjxpj.aspx?xkkh=xsjxpj.aspx&xh=16051614&gnmkdm=N121401"]').click();
+                    let schoolNumberString = document.querySelector("[name=Form1]").action;
+                    let schoolNumber = schoolNumberString.substring((schoolNumberString.length - 8), schoolNumberString.length);
+                    let href = "xsjxpj.aspx?xkkh=xsjxpj.aspx&xh=" + schoolNumber + "&gnmkdm=N121401"
+                    document.querySelector('[href="' + href + '"]').click();
                 } else {
                     alert('已经开始自动学评教，请勿重复点击开始！');
                 }
             },
-            id:"autoRating_a"
+            id: "autoRating_a"
         }, document.querySelector('#autoRating_li'));
     }
 }

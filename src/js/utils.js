@@ -7,14 +7,14 @@
  * （外部脚本请勿直接访问此变量，获取配置通过 const config = await readConfig(); 进行获取）
  */
 const OPTION = {
-	/* 抢课设置 */
-	disableCaptcha: false,
+    /* 抢课设置 */
+    disableCaptcha: false,
 
-	/* 自动计算学分设置 */
-	countCredit: false,
+    /* 自动计算学分设置 */
+    countCredit: false,
 
-	/* 自动计算学分设置 */
-	autoRate: false,
+    /* 自动计算学分设置 */
+    autoRate: false,
 }
 
 /**
@@ -22,9 +22,9 @@ const OPTION = {
  * 必须在 "run_at": "document_start" 时注入才能生效
  */
 function disableAlert() {
-	addElement(
-		'script',
-		`
+    addElement(
+        'script',
+        `
 			window._alert = window.alert;
 			window.alert = (text) => {
 				if (text.includes('验证码不正确')) {
@@ -56,18 +56,18 @@ function disableAlert() {
 				}
 			};
 		`,
-		{},
-		document.documentElement
-	);
+        {},
+        document.documentElement
+    );
 }
 
 /**
  * 屏蔽验证码图片
  */
 function disableCaptcha() {
-	const img = document.querySelector('img[src="CheckCode.aspx"]');
-	img.removeAttribute('src');
-	img.parentElement.innerHTML = 'HDU-GO 为您屏蔽了验证码，每次重新开启屏蔽验证码功能都请重新启动浏览器确保功能生效。';
+    const img = document.querySelector('img[src="CheckCode.aspx"]');
+    img.removeAttribute('src');
+    img.parentElement.innerHTML = 'HDU-GO 为您屏蔽了验证码，每次重新开启屏蔽验证码功能都请重新启动浏览器确保功能生效。';
 }
 
 /**
@@ -78,10 +78,10 @@ function disableCaptcha() {
  * @param {HTMLElement} fatherEl 父元素，默认为 body
  */
 function addElement(tagName, innerHTML = '', options = {}, fatherEl = document.body) {
-	const el = document.createElement(tagName);
-	el.innerHTML = innerHTML;
-	Object.assign(el, options);
-	fatherEl.appendChild(el);
+    const el = document.createElement(tagName);
+    el.innerHTML = innerHTML;
+    Object.assign(el, options);
+    fatherEl.appendChild(el);
 }
 
 /**
@@ -89,20 +89,20 @@ function addElement(tagName, innerHTML = '', options = {}, fatherEl = document.b
  * 取消回调写法，调用使用 async/await
  */
 function readConfig() {
-	return new Promise(resolve => {
-		chrome.storage.sync.get(OPTION, function (option) {
-			// 获取到的 option 合并到内存里
-			Object.assign(OPTION, option);
-			resolve(option);
-		});
-	});
+    return new Promise(resolve => {
+        chrome.storage.sync.get(OPTION, function (option) {
+            // 获取到的 option 合并到内存里
+            Object.assign(OPTION, option);
+            resolve(option);
+        });
+    });
 }
 
 /**
  * 保存用户配置
  */
 function saveConfig(config) {
-	chrome.storage.sync.set(config);
+    chrome.storage.sync.set(config);
 }
 
 /**
@@ -110,8 +110,8 @@ function saveConfig(config) {
  * @param  {...Number} num 待累加的数字
  */
 function sum(...num) {
-	return num.reduce(
-		(a, b) => a + b,
-		0
-	);
+    return num.reduce(
+        (a, b) => a + b,
+        0
+    );
 }

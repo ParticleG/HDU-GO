@@ -6,35 +6,35 @@
  */
 
 const TABLE_ID = {
-	'/xsxk.aspx': 'kcmcgrid',
-	'/xsxkqk.aspx': 'DBGrid',
+    '/xsxk.aspx': 'kcmcgrid',
+    '/xsxkqk.aspx': 'DBGrid',
 };
 const CREDIT_INDEX = {
-	'/xsxk.aspx': 4,
-	'/xsxkqk.aspx': 5,
+    '/xsxk.aspx': 4,
+    '/xsxkqk.aspx': 5,
 };
 
 // 入口
 window.onload = async () => {
-	const config = await readConfig();
-	if (!config.countCredit) {
-		return;
-	}
+    const config = await readConfig();
+    if (!config.countCredit) {
+        return;
+    }
 
-	// 不同页面的表格 id 不同，学分所在的列也不同，自动适配下
-	const tableId = TABLE_ID[location.pathname];
-	const creditIndex = CREDIT_INDEX[location.pathname];
+    // 不同页面的表格 id 不同，学分所在的列也不同，自动适配下
+    const tableId = TABLE_ID[location.pathname];
+    const creditIndex = CREDIT_INDEX[location.pathname];
 
-	const creditArr = Array.from(document.querySelector(`#${tableId}`).querySelectorAll('tr'))
-		.map(item => item.querySelectorAll('td')[creditIndex])
-		.map(item => parseFloat(item && item.innerHTML))
-		.filter(item => !isNaN(item));
-	const creditSum = sum(...creditArr);
+    const creditArr = Array.from(document.querySelector(`#${tableId}`).querySelectorAll('tr'))
+        .map(item => item.querySelectorAll('td')[creditIndex])
+        .map(item => parseFloat(item && item.innerHTML))
+        .filter(item => !isNaN(item));
+    const creditSum = sum(...creditArr);
 
-	document.querySelector(`#${tableId}`)
-		.querySelector('tr')
-		.querySelectorAll('td')[creditIndex]
-		.innerHTML += `<br /><br />合计: ${creditSum}`;
+    document.querySelector(`#${tableId}`)
+        .querySelector('tr')
+        .querySelectorAll('td')[creditIndex]
+        .innerHTML += `<br /><br />合计: ${creditSum}`;
 }
 
 

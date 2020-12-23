@@ -4,16 +4,16 @@
  * Google 文档：https://developer.chrome.com/extensions/webRequest#examples
  */
 (async function () {
-	const config = await readConfig();
-	if (!config.disableCaptcha) {
-		return;
-	}
+    const config = await readConfig();
+    if (!config.disableCaptcha) {
+        return;
+    }
 
-	chrome.webRequest.onBeforeRequest.addListener(
-		function () {
-			return { cancel: true };
-		},
-		{ urls: ['*://jxgl.hdu.edu.cn/CheckCode.aspx', '*://jxglteacher.hdu.edu.cn/CheckCode.aspx'] },
-		['blocking']
-  	);
-}) ();
+    chrome.webRequest.onBeforeRequest.addListener(
+        function () {
+            return {cancel: true};
+        },
+        {urls: ['*://jxgl.hdu.edu.cn/CheckCode.aspx', '*://jxglteacher.hdu.edu.cn/CheckCode.aspx']},
+        ['blocking']
+    );
+})();
