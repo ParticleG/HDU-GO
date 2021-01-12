@@ -54,7 +54,7 @@ function iFrameRating() {
     if (document.querySelectorAll("select")[0].selectedIndex === document.querySelectorAll("select")[0].length - 1) {
         localStorage.setItem("Rating", "last");
     }
-    for (var index = 1; index < document.querySelectorAll("select").length; index++) {
+    for (let index = 1; index < document.querySelectorAll("select").length; index++) {
         document.querySelectorAll("select")[index].selectedIndex = Math.ceil(Math.random() * 2);
     }
     document.querySelector("#Button1").click();
@@ -62,8 +62,7 @@ function iFrameRating() {
 
 function iFrameSubmit() {
     localStorage.setItem("Rating", "false");
-    var confirmed = window.confirm("评价已经全部完成！是否直接提交？");
-    if (confirmed) {
+    if (window.confirm("评价已经全部完成！是否直接提交？")) {
         document.querySelector("#Button2").click();
         //console.log("Confirmed.");
     }

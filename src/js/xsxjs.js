@@ -5,11 +5,11 @@
 
 'use strict';
 
-var LESSON = {
+const LESSON = {
     lessonNumber: "",
     capacityNumber: 0,
     takenNumber: 0,
-    isAvaliable: false
+    isAvailable: false
 };
 
 // 禁用 alert 立即执行
@@ -30,17 +30,17 @@ function getLessonInfo() {
     /*从用户点击里得到选课课号、容量及已选人数的信息 */
     document.addEventListener("click", function (tab) {
         /*判断用户是否点击的是选课按钮，选课按钮id通常为空*/
-        if (tab.path[0].nodeName == "INPUT" && tab.path[0].id == '') {
+        if (tab.path[0].nodeName === "INPUT" && tab.path[0].id === '') {
             LESSON.lessonNumber = tab.path[0].value
             LESSON.capacityNumber = Number(tab.path[2].childNodes[23].innerHTML)
             LESSON.takenNumber = Number(tab.path[2].childNodes[29].innerHTML)
             if (LESSON.capacityNumber > LESSON.takenNumber) {
                 console.log('the class is avalialble')
-                LESSON.isAvaliable = true
+                LESSON.isAvailable = true
                 pick();
             } else {
                 console.log('capacity:' + LESSON.capacityNumber + ',taken:' + LESSON.takenNumber + 'the class is not avalialble, refreshing...')
-                LESSON.isAvaliable = false
+                LESSON.isAvailable = false
                 readConfig();
                 setTimeout(function () {
                     chrome.storage.sync.set(LESSON);
@@ -55,7 +55,7 @@ function getLessonInfo() {
 
 function repeat() {
     document.addEventListener("DOMContentLoaded", function () {
-        if (window.location.hash == "#reload") {
+        if (window.location.hash === "#reload") {
             chrome.storage.sync.get(LESSON, function (lesson) {
                 console.log('Value currently is ' + lesson.lessonNumber);
                 document.querySelectorAll("input[value='" + lesson.lessonNumber + "']")[0].click()

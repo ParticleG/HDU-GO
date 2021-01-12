@@ -1,9 +1,9 @@
 {
 	"manifest_version": 2,
 	"name": "HDU-GO",
-	"version": "2020.1",
+	"version": "2020.2",
 	"description": "身在杭电必用的Chrome插件！",
-	"homepage_url": "https://alphanut.cn/HDU-GO",
+	"homepage_url": "https://hdu-stea.gitee.io/hdu-go/",
 	"icons": {
 		"16": "img/icon.png",
 		"48": "img/icon.png",

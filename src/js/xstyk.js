@@ -10,11 +10,11 @@
     disableAlert();
 })();
 
-var LESSON = {
+const LESSON = {
     lessonNumber: "",
     capacityNumber: 0,
     takenNumber: 0,
-    isAvaliable: false
+    isAvailable: false
 };
 
 // 入口
@@ -28,8 +28,8 @@ getLessonInfo();
 repeat();
 
 function blockPopup() {
-    var actualCode = `window.open = null`;
-    var script = document.createElement('script');
+    const actualCode = `window.open = null`;
+    const script = document.createElement('script');
     script.textContent = actualCode;
     (document.head || document.documentElement).appendChild(script);
 }
@@ -38,9 +38,9 @@ function getLessonInfo() {
     /*从用户点击里得到选课课号、容量及已选人数的信息 */
     document.addEventListener("click", function (tab) {
         /*判断用户是否点击的是选课按钮，选课按钮id通常为空*/
-        var reg = "‖\\d+‖\\d+‖"
-        var tempInfo
-        if (tab.path[0].value.length == 63) {
+        const reg = "‖\\d+‖\\d+‖";
+        let tempInfo;
+        if (tab.path[0].value.length === 63) {
             LESSON.lessonNumber = String(tab.path[0].value)
             console.log(LESSON.lessonNumber)
             tempInfo = String(tab.path[0].innerHTML.match(reg))
@@ -48,14 +48,14 @@ function getLessonInfo() {
             LESSON.takenNumber = Number(tempInfo.substring(4, 6))
             if (LESSON.capacityNumber > LESSON.takenNumber) {
                 console.log('the class is avalialble')
-                LESSON.isAvaliable = true
+                LESSON.isAvailable = true
                 pick();
             } else {
                 console.log('capacity:' + LESSON.capacityNumber + ',taken:' + LESSON.takenNumber + '. the class is not avalialble')
-                LESSON.isAvaliable = false
+                LESSON.isAvailable = false
                 setTimeout(function () {
                     chrome.storage.sync.set(LESSON);
-                    if (localStorage.getItem("Selecting") == "true") {
+                    if (localStorage.getItem("Selecting") === "true") {
                         document.querySelector('input#Button4').click();
                     }
                 }, 1500);

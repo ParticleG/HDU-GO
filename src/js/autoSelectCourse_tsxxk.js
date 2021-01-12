@@ -91,8 +91,13 @@ function injectAddToListButton() {
             document.querySelectorAll('[type=checkbox]').forEach(item => {
                 if (item.checked) {
                     item.checked = false;
-                    let courseListJson = JSON.parse(localStorage.getItem("courseListJson"));
-                    courseListJson[item.parentElement.parentElement.children[3].innerText + item.parentElement.parentElement.children[4].innerText + item.parentElement.parentElement.children[5].innerText] = `<tr>
+                    let courseListJson = localStorage.getItem("courseListJson") === null ?
+                        {} :
+                        JSON.parse(localStorage.getItem("courseListJson"));
+
+                    courseListJson[item.parentElement.parentElement.children[3].innerText +
+                    item.parentElement.parentElement.children[4].innerText +
+                    item.parentElement.parentElement.children[5].innerText] = `<tr>
 						<td>` + item.parentElement.parentElement.children[2].innerText + `</td>
 						<td>` + item.parentElement.parentElement.children[3].innerText + `</td>
 						<td>` + item.parentElement.parentElement.children[4].innerText + `</td>
@@ -115,7 +120,7 @@ function injectAddToListButton() {
                     localStorage.setItem("courseListJson", JSON.stringify(courseListJson));
                 }
             });
-            submitForm();
+            document.querySelector('#Button1').click();
         },
         id: "addToList_button"
     }, document.querySelector('.footbutton'));
@@ -125,12 +130,9 @@ function injectAddToListButton() {
  * 自动选课函数
  */
 function autoSelectCourseFunc() {
-    if (localStorage.getItem("Selecting") !== "true") {
-        //console.log("Not Enabled.");
-    } else {
-        //console.log("Enabled.");
-        var courseListArray = document.querySelector('#courseList_tbody').childNodes;
-        var checkBoxPatten = /kcmcGrid_ctl[0-9]{2,3}_xk/;
+    if (localStorage.getItem("Selecting") === "true") {
+        const courseListArray = document.querySelector('#courseList_tbody').childNodes;
+        const checkBoxPatten = /kcmcGrid_ctl[0-9]{2,3}_xk/;
         document.querySelectorAll('[type=checkbox]').forEach(item => {
             if (checkBoxPatten.test(item.id)) {
                 for (let i = 1; i < courseListArray.length; i++) {
@@ -143,7 +145,7 @@ function autoSelectCourseFunc() {
                 }
             }
         });
-        submitForm();
+        document.querySelector('#Button1').click();
     }
 }
 
@@ -161,39 +163,4 @@ function injectAlertDisabler() {
     };`, {
         className: "disableAlert_script"
     }, document.documentElement);
-}
-
-/**
- * 选中选课框
- */
-function checkBox() {
-    document.querySelector('#kcmcGrid').querySelector('input').checked = true;
-}
-
-/**
- * 提交选课
- */
-function submitForm() {
-    document.querySelector('#Button1').click();
-}
-
-/**
- * 添加 loading 条
- */
-function addLoadingBar() {
-    addElement('style', `
-		@keyframes loading {
-			from { width: 0% } to { width: 100% };
-		}
-	`);
-    addElement('div', '', {
-        style: 'height: 5px; background: #cadaee; animation: loading 1.5s'
-    });
-}
-
-/**
- * 点击搜索按钮
- */
-function searchClass() {
-    document.querySelector('input#Button2').click();
 }
