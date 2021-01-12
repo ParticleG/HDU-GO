@@ -28,12 +28,12 @@ HDU-GO 按照 Chrome 官方开发文档进行开发而成，完美支持各类�
 
 选择你所使用的浏览器查看安装步骤：
 
-1. [Chrome](install/chrome)
-2. [MS Edge Dev（同 Chrome）](install/chrome)
-3. [QQ浏览器](install/qq)
-4. [搜狗浏览器](install/sogou)
-5. [360极速浏览器（同搜狗）](install/sogou)
-6. [360安全浏览器（同搜狗）](install/sogou)
+1. [Chrome](https://hdu-stea.gitee.io/hdu-go/#/install/chrome)
+2. [Edge（同 Chrome）](https://hdu-stea.gitee.io/hdu-go/#/install/chrome)
+3. [QQ浏览器](https://hdu-stea.gitee.io/hdu-go/#/install/qq)
+4. [搜狗浏览器](https://hdu-stea.gitee.io/hdu-go/#/install/sogou)
+5. [360极速浏览器（同搜狗）](https://hdu-stea.gitee.io/hdu-go/#/install/sogou)
+6. [360安全浏览器（同搜狗）](https://hdu-stea.gitee.io/hdu-go/#/install/sogou)
 
 其他浏览器安装步骤估计差不多，请自行尝试。
 
@@ -43,17 +43,17 @@ HDU-GO 按照 Chrome 官方开发文档进行开发而成，完美支持各类�
 
 使用的是QQ、搜狗、360浏览器等国产双模式渲染的浏览器，请务必切换成 **高速模式** 才能使用浏览器扩展功能。
 
-1. [抢课 - 通识选修课](usage/tsxxk)
-2. [抢课 - 普通理论课](usage/xsxjs)
-3. [抢课 - 体育课]()
-4. [自动计算学分](usage/count-credit)
-5. [自动学评教](usage/auto-rating)
+1. [抢课 - 通识选修课](https://hdu-stea.gitee.io/hdu-go/#/usage/tsxxk)
+2. [抢课 - 普通理论课](https://hdu-stea.gitee.io/hdu-go/#/usage/xsxjs)
+3. [抢课 - 体育课](https://hdu-stea.gitee.io/hdu-go/#/usage/xstyk)
+4. [自动计算学分](https://hdu-stea.gitee.io/hdu-go/#/usage/count-credit)
+5. [自动学评教](https://hdu-stea.gitee.io/hdu-go/#/usage/auto-rating)
 
 ## 参与贡献
 
 1. Fork 本仓库
 2. 新建 dev_by_xxx 分支
-3. 加入[HDU-GO 官方讨论交流群](https://jq.qq.com/?_wv=1027&k=5Ne7Fg3)
+3. 加入[STEA 官方讨论交流群](https://jq.qq.com/?_wv=1027&k=5Ne7Fg3)
 4. 新建 Pull Request
 
 ## 特别声明
